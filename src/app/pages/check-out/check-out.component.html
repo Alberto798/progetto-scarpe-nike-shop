@@ -1,0 +1,105 @@
+<h1>Fatturazione</h1>
+
+<section class="fattura">
+
+  <div class="left-container">
+
+
+
+
+    <form [formGroup]="checkoutForm" action="../Pagamento/index.html" class="carrello">
+
+      <div class="form-control">
+
+        <input id="Nome" type="text" placeholder="Nome" formControlName="nome">
+        <ng-container *ngIf="checkoutForm.get('nome')?.errors && checkoutForm.get('nome')?.touched">
+          <span class="errore" *ngIf="checkoutForm.get('nome')?.hasError('required')">Il campo è obbligatorio</span>
+          <span class="errore" *ngIf="checkoutForm.get('nome')?.hasError('minlength')">Devi inserire minimo 3
+            caratteri</span>
+        </ng-container>
+
+      </div>
+
+      <div class="form-control">
+        <input id="Cognome" type="text" placeholder="Cognome" formControlName="cognome">
+        <ng-container *ngIf="checkoutForm.get('cognome')?.errors && checkoutForm.get('cognome')?.touched">
+          <span class="errore" *ngIf="checkoutForm.get('cognome')?.hasError('required')">Il campo è obbligatorio</span>
+          <span class="errore" *ngIf="checkoutForm.get('cognome')?.hasError('minlength')">Devi inserire minimo 3
+            caratteri</span>
+        </ng-container>
+      </div>
+      <div class="form-control">
+        <input id="Email" type="text" placeholder="Email" formControlName="email">
+        <ng-container *ngIf="checkoutForm.get('email')?.errors && checkoutForm.get('email')?.touched">
+          <span class="errore" *ngIf="checkoutForm.get('email')?.hasError('required')">Il campo è obbligatorio</span>
+          <span class="errore" *ngIf="checkoutForm.get('email')?.hasError('email')">Inserisci una e-mail valida
+          </span>
+        </ng-container>
+      </div>
+      <div class="form-control">
+        <input id="Telefono" type="text" placeholder="Telefono" formControlName="telefono">
+        <ng-container *ngIf="checkoutForm.get('telefono')?.errors && checkoutForm.get('telefono')?.touched">
+          <span class="errore" *ngIf="checkoutForm.get('telefono')?.hasError('required')">Il campo è obbligatorio</span>
+          <span class="errore" *ngIf="checkoutForm.get('telefono')?.hasError('pattern')">Inserisci un numero valido
+          </span>
+        </ng-container>
+      </div>
+      <div class="form-control">
+        <input id="Indirizzo" type="text" placeholder="Indirizzo" formControlName="indirizzo">
+        <ng-container *ngIf="checkoutForm.get('indirizzo')?.errors && checkoutForm.get('indirizzo')?.touched">
+          <span class="errore" *ngIf="checkoutForm.get('indirizzo')?.hasError('required')">Il campo è
+            obbligatorio</span>
+          <span class="errore" *ngIf="checkoutForm.get('indirizzo')?.hasError('pattern')">Inserisci un indirizzo valido
+          </span>
+        </ng-container>
+      </div>
+      <div class="form-control">
+        <input id="Città" type="text" placeholder="Città" formControlName="città">
+        <ng-container *ngIf="checkoutForm.get('città')?.errors && checkoutForm.get('città')?.touched">
+          <span class="errore" *ngIf="checkoutForm.get('città')?.hasError('required')">Il campo è obbligatorio</span>
+          <span class="errore" *ngIf="checkoutForm.get('città')?.hasError('pattern')">Inserisci una città valida
+          </span>
+        </ng-container>
+      </div>
+      <div class="form-control">
+        <input id="CAP" type="text" placeholder="CAP" formControlName="cap">
+        <ng-container *ngIf="checkoutForm.get('cap')?.errors && checkoutForm.get('cap')?.touched">
+          <span class="errore" *ngIf="checkoutForm.get('cap')?.hasError('required')">Il campo è obbligatorio</span>
+          <span class="errore" *ngIf="checkoutForm.get('cap')?.hasError('pattern')">Inserisci un CAP valido
+          </span>
+        </ng-container>
+      </div>
+
+      <div class="actions">
+
+        <h3>Opzioni di consegna</h3>
+
+        <div class="sub-actions">
+
+          <div id="Spedizione">Spedizione</div>
+          <div id="Ritiro">Ritiro</div>
+
+        </div>
+
+
+        <button type="submit" id="Salva" (click)="goToPayment()">Salva e continua</button>
+      </div>
+
+    </form>
+
+
+
+  </div>
+  <div class="right-container">
+
+    <h3>Nel carrello</h3>
+
+    <p>Costi di spedizione <br> stimati: Gratis</p>
+    <p>Totale: {{cartScarpe.totalCart$ | async}}&euro;</p>
+    <!-- async fa in automatico sottoscrizione -->
+
+  </div>
+
+
+
+</section>

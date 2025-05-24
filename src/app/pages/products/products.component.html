@@ -1,0 +1,84 @@
+<div class="products-container">
+
+   
+    <div class="side-bar">
+        <H2>Nuovi arrivi Nike</H2>
+
+        <ul>
+            <li>Scarpe</li>
+            <li>Top, maglie e T-shirt</li>
+            <li>Pantaloncini</li>
+            <li>Pantaloni e Tights</li>
+            <li>Accessori</li>
+            <li>Giacche e smanicati</li>
+            <li>Felpe e maglie</li>
+            <li>Tute sportive</li>
+            <li>Compression fit e <br>strati base</li>
+            <li>Calzini & underwear</li>
+        </ul>
+
+        <h3>Filtra</h3>
+
+        
+        <div id="colore" (click)="itemClicked('colore')">
+            Colore 
+            <ul *ngIf="isAccordionOpen['colore']"  class="First" (click)="$event.stopPropagation()">
+                
+                <div id="divR" (click)="onColorChanges($event, colore.title)"></div>
+                <li id="R" (click)="$event.stopPropagation()">{{colore.title}}</li>
+
+                <div id="divV" (click)="onColorChanges($event, colore.title2)"></div>
+                <li id="V" (click)="$event.stopPropagation()">{{colore.title2}}</li>
+
+                <div id="divB" (click)="onColorChanges($event, colore.title3)" ></div>
+                <li id="B" (click)="$event.stopPropagation()">{{colore.title3}}</li>
+
+                <div id="divG"(click)="onColorChanges($event, colore.title4)" ></div>
+                <li id="G" (click)="$event.stopPropagation()">{{colore.title4}}</li>
+
+                <div id="divN"(click)="onColorChanges($event, colore.title5)" ></div>
+                <li id="N" (click)="$event.stopPropagation()">{{colore.title5}}</li>
+
+                <div id="divBI"(click)="onColorChanges($event, colore.title6)" ></div>
+                <li id="BI" (click)="$event.stopPropagation()">{{colore.title6}}</li>
+
+                <div id="divA" (click)="onColorChanges($event, colore.title7)"></div>
+                <li id="A" (click)="$event.stopPropagation()">{{colore.title7}}</li>
+
+                <div id="divM"(click)="onColorChanges($event, colore.title8)" ></div>
+                <li id="M" (click)="$event.stopPropagation()">{{colore.title8}}</li>
+
+                <div id="divViola"(click)="onColorChanges($event, colore.title9)" ></div>
+                <li id="Viola" (click)="$event.stopPropagation()">{{colore.title9}}</li>
+            </ul>
+
+        </div>
+        <div id="categoria" (click)="itemClicked('categoria')">
+            Categorie
+            <div *ngIf="isAccordionOpen['categoria']" class="second" (click)="$event.stopPropagation()">
+                <input type="checkbox" (click)="onSportChanges($event,sportEnum.category1)">Sneakers<br>
+                <input type="checkbox" (click)="onSportChanges($event,sportEnum.category2)">Basket <br>
+                <input type="checkbox" (click)="onSportChanges($event,sportEnum.category3)" >Running<br>
+                <input type="checkbox" (click)="onSportChanges($event,sportEnum.category4)" >Trail Running
+            </div>
+        </div>
+        <div id="prezzo" (click)="itemClicked('prezzo')">
+            Aquista per prezzo
+            <div *ngIf="isAccordionOpen['prezzo']" class="third" (click)="$event.stopPropagation()">
+            <p><input type="checkbox" (click)="onPriceChanges($event,priceEnum.price)">Inferiore a 50€</p>
+            <p><input type="checkbox" (click)="onPriceChanges($event,priceEnum.price2)">Tra 50 e 100€</p>
+            <p><input type="checkbox" (click)="onPriceChanges($event,priceEnum.price3)">Tra 100 e 150€</p>
+            <p><input type="checkbox" (click)="onPriceChanges($event,priceEnum.price4)">Superiore a 150€</p></div>
+        </div>
+   
+
+    </div>
+
+    <div class="products-content">
+
+        <app-product-card *ngFor="let elem of products" [product]="elem"></app-product-card>
+
+
+    </div>
+
+</div>

@@ -1,0 +1,94 @@
+$breakpoint-tablet: 768px;
+
+
+.boxCarrello {
+
+    width: 25%;
+    margin-left: 64%;
+    height: 40%;
+    opacity: 1;
+    background-color: #c9c9c9;
+    position: absolute;
+    z-index: 1;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+    @media(max-width:$breakpoint-tablet) {
+
+        width: 43%;
+        height: 25%;
+        margin-left: 60%;
+
+    }
+
+
+    h3 {
+        margin-left: 20px;
+    }
+
+
+
+    #x {
+
+        width: 30px;
+        background-color: transparent;
+        color: #333;
+        border: none;
+        float: right;
+        font-size: 1.3em;
+        cursor: pointer;
+
+    }
+
+    img {
+
+        width: 80px;
+        float: left;
+        margin-left: 20px;
+
+    }
+
+
+    p {
+
+        margin-left: 30%;
+    }
+
+    button {
+
+        width: 250px;
+        margin: 20px;
+        background-color: black;
+        color: white;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 10px;
+
+    }
+
+    a {
+
+        text-decoration: none;
+        color: white;
+    }
+
+
+}
+
+
+.copertura {
+
+    position: absolute;
+    background-color: rgb(51, 49, 49);
+    width: 99%;
+    height: 140%;
+    opacity: 0.5;
+    margin: 0;
+
+    @media(max-width:$breakpoint-tablet) {
+
+        width: 100%;
+
+    }
+
+}

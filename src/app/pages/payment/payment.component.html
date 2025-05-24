@@ -1,0 +1,55 @@
+<section>
+
+
+    <nav id="dati">
+        <h1>Pagamento</h1>
+
+
+
+        <input id="sconto" type="checkbox" name="sconto" value="html"> Hai un codice sconto o un Gift card? <br>
+        <input id="sconto2" type="text">
+
+        <p>Seleziona un metodo di pagamento</p>
+
+        <input type="checkbox" name="Carta" value="carta"> Carta di credito o debitio<br>
+        <select name="opzioni" id="metodi">
+            <option value=""></option>
+            <option value="Gpay">G-pay</option>
+            <option value="Paypal">Paypal</option>
+
+        </select>
+
+
+        <!-- <input type= "checkbox" name="Paypal" value="paypal"> 
+        <img  class="pay" src="./icons8-paypal-an-online-payments-system-operating-worldwide-48.png" alt="logo Paypal"> <br>
+        <input  id="Gpay" type="checkbox" name="Gpay"  value="Gpay"> 
+        <img class="pay" src="./icons8-google-pay-is-the-fast,-simple-way-to-pay-online,-in-stores-and-more.-48.png" alt="icona Google pay"> -->
+
+        <form id="datiCarta" action="../ringraziamenti/index.html">
+
+
+            <h3>Aggungi carta</h3>
+            <div>
+                <div><input type="text" placeholder="Numero carta" id="Carta">
+                    <p class="errore"></p>
+                </div>
+                <div><input type="text" placeholder="MM/AA" id="meseAnno">
+                    <p class="errore"></p>
+                </div>
+                <div><input type="text" placeholder="CVV" id="Cod"></div>
+            </div>
+            <p><button (click)="goTothankYou()">Termina e paga</button></p>
+
+        </form>
+
+    </nav>
+    <div id="scarpeScelte">
+
+        <p>Totale: {{cartService.totalCart$ | async}} &euro;</p>
+
+    </div>
+
+
+
+
+</section>

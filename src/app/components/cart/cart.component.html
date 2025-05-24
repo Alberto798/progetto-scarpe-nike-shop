@@ -1,0 +1,37 @@
+<section id="shop">
+
+   <h1>Prodotti nel carrello</h1>
+
+   <div id="products">
+
+      <app-cart-item *ngFor="let prodotto of scarpe" [product]="prodotto"></app-cart-item>
+      <!-- per ogni scarpa renderizza cart-item -->
+
+   </div>
+
+
+
+
+   <h3>Riepilogo</h3>
+
+   <div class="riepilogo">
+      <p>Subtotale: {{cartTotal.toFixed(2)}}&euro;</p>
+      <p>Costi di spedizione : Gratis</p>
+      <p>Totale: {{cartTotal.toFixed(2)}}&euro;</p>
+
+
+
+   </div>
+
+
+
+
+
+
+   <button (click)="goToCheckOut()">Vai al pagamento</button>
+
+</section>
+
+
+
+<hr>

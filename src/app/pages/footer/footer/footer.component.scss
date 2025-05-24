@@ -1,0 +1,111 @@
+$breakpoint-smartphone: 360px;
+
+.wrapper {
+
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 50% 50%;
+
+    @media(max-width:$breakpoint-smartphone) {
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-rows: 50% 50%;
+
+
+    }
+}
+
+.wrapper .Element1 {
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.wrapper .Element1 ul,
+.wrapper .Element2 ul,
+.wrapper .Element3 ul,
+.wrapper .FinalElement ul {
+
+    list-style: none;
+    margin-left: 8%;
+
+    @media(max-width:$breakpoint-smartphone) {
+        padding: 0;
+    }
+
+}
+
+.wrapper .Element1 h2,
+.wrapper .Element2 h2,
+.wrapper .Element3 h2 {
+
+    color: black;
+    font-size: 1.3em;
+    margin-top: 8%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+
+.wrapper .Element1 ul li,
+.Element2 ul li,
+.Element3 ul li {
+
+    margin-bottom: 10px;
+
+}
+
+.wrapper .Element1 ul li a,
+.Element2 ul li a,
+.Element3 ul li a,
+.FinalElement ul li a {
+
+    text-decoration: none;
+    color: black;
+
+}
+
+.wrapper .FinalElement {
+
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    margin-top: 7%;
+
+    @media(max-width:$breakpoint-smartphone) {
+        margin-top: 20%;
+    }
+
+
+
+}
+
+
+hr {
+
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.wrapper .FinalElement ul {
+
+    display: flex;
+
+    @media(max-width:$breakpoint-smartphone) {
+        flex-direction: column;
+    }
+
+
+}
+
+
+
+.wrapper .FinalElement ul li {
+
+    margin-left: 2%;
+}
+
+.wrapper .FinalElement ul:nth-child(1) {
+
+    margin-left: 0;
+    color: black;
+}
