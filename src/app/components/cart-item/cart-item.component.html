@@ -1,0 +1,27 @@
+<div id="shoes">
+
+   <img [src]="product?.immagine" alt="">
+
+   <div id="data">
+      <p>{{product?.nome}}</p>
+      <p>{{product?.categoria}}</p>
+      <p>Taglia:{{product?.taglia}}</p>
+
+
+
+
+   </div>
+
+   <p id="cash">{{product?.prezzo}}€</p>
+
+   <div class="numeroScarpeScelte">
+      <button (click)="removeScarpa()">-</button>
+      <p>{{product?.quantita}}</p>
+      <button (click)="addScarpa()">+</button>
+   </div>
+
+   <p></p>
+
+
+
+</div>

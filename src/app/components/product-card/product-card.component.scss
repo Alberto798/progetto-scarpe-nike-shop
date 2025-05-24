@@ -1,0 +1,45 @@
+$breakpoint-tablet: 768px;
+$breakpoint-smartphone: 360px;
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+        height: 440px;
+        gap: 1rem;
+        object-fit: cover;
+
+        @media(max-width: $breakpoint-tablet) {
+            width: 100%;
+            height: 220px;
+        }
+    }
+
+    p {
+        margin: 5px;
+
+    }
+}
+
+.content :nth-child(2) {
+    color: rgb(197, 37, 37);
+    font-size: 1.3em;
+}
+
+.content :nth-child(3) {
+    color: rgb(154, 143, 143);
+
+}
+
+.content :nth-child(4) {
+    color: rgb(154, 143, 143);
+
+}
+
+.content :nth-child(5) {
+    color: rgb(7, 6, 6);
+    font-size: 1.1em;
+
+}

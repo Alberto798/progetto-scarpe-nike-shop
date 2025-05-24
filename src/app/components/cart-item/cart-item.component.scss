@@ -1,0 +1,153 @@
+$breakpoint-tablet: 768px;
+$breakpoint-smartphone: 360px;
+
+#shoes {
+
+    width: 420px;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    margin-left: 10%;
+    max-height: 500px;
+    margin-bottom: 50px;
+    overflow: auto;
+    margin-top: 20px;
+
+    @media (max-width:$breakpoint-tablet) {
+
+        width: 370px;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin-left: 10%;
+        max-height: 500px;
+        margin-bottom: 50px;
+        overflow: auto;
+        margin-top: 20px;
+
+    }
+
+    @media (max-width: $breakpoint-smartphone) {
+
+        width: 370px;
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 50px;
+        overflow: auto;
+        margin-top: 40px;
+
+    }
+
+
+
+    img {
+        width: 80%;
+        grid-column: 1/2;
+
+        @media (max-width:$breakpoint-tablet) {
+
+            width: 70%;
+            grid-column: 1/2;
+
+
+        }
+
+        @media (max-width: $breakpoint-smartphone) {
+
+            width: 150px;
+
+
+        }
+
+
+    }
+
+    #data {
+        grid-column: 2/3;
+
+
+        @media (max-width:$breakpoint-tablet) {
+
+            font-size: 0.9em;
+            width: 80%;
+        }
+
+        @media (max-width: $breakpoint-smartphone) {
+
+
+            grid-column: 1/2;
+            grid-row: 2/3
+        }
+
+
+
+
+
+    }
+
+    #cash {
+
+        grid-column: 3/4;
+        margin-left: 30%;
+
+        @media (max-width:$breakpoint-tablet) {
+
+            margin-left: 0;
+            grid-column: 2/3;
+            font-size: 0.9em;
+        }
+
+
+    }
+
+    .numeroScarpeScelte {
+
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 0;
+        width: 100px;
+        height: 30px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+
+        @media (max-width:$breakpoint-tablet) {
+
+            width: 70px;
+            height: 20px;
+            margin-top: 0;
+        }
+
+        button {
+
+            border-radius: 10px;
+            width: 40px;
+            height: 30px;
+            padding: 0px;
+            border: transparent;
+            cursor: pointer;
+            background-color: transparent;
+            font-size: 1.4em;
+
+            @media (max-width:$breakpoint-tablet) {
+
+                width: 20px;
+                height: 20px;
+                font-size: 1em;
+            }
+
+        }
+
+        button:hover {
+            background-color: gray;
+            color: white;
+        }
+
+
+
+
+
+
+    }
+
+}

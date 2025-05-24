@@ -1,0 +1,20 @@
+<div *ngIf="showPreviews">
+    <div class="boxCarrello">
+        <button id="x" (click)="hidePrewiew()">x</button>
+        <h3>Aggiunto al carrello</h3>
+
+        <img [src]="scarpa?.immagine">
+        <p>{{scarpa?.nome}}</p>
+        <p>{{scarpa?.categoria}}</p>
+        <p>{{scarpa?.prezzo}}&euro;</p>
+        <p>{{scarpa?.taglia}}</p>
+
+        <button (click)="goToCart()"><a>Vai al Carrello</a></button>
+
+
+
+    </div>
+
+    <div class="copertura"></div>
+
+</div>

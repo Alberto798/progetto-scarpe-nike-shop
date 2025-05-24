@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+}
+
+$breakpoint-tablet: 768px;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(114, 110, 110);
+}
+
+section {
+
+    margin: 0 auto;
+    width: 800px;
+    height: 700px;
+    margin-top: 8%;
+    color: black;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-row: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    @media(max-width:$breakpoint-tablet) {
+
+        width: 700px;
+        grid-template-columns: 75% 25%;
+
+
+    }
+
+
+
+}
+
+
+h1 {
+
+    text-align: left;
+    color: black;
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 2em;
+    margin-top: 0;
+
+    @media(max-width:$breakpoint-tablet) {
+
+        font-size: 1.5em;
+
+
+    }
+
+}
+
+section #sconto1 {
+
+    margin-top: 1%;
+    border: 1px solid black;
+    width: 200px;
+    height: 30px;
+    grid-column: 1;
+    grid-row: 2;
+
+}
+
+section #sconto2 {
+
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 2%;
+    border: 1px solid black;
+    width: 200px;
+    height: 30px;
+}
+
+#datiCarta {
+
+    border: 1px solid white;
+    padding: 10px;
+    margin-top: 3%;
+    /* grid-column: 1 / 3;
+    grid-row: 2 / 3; */
+    margin-bottom: 0;
+}
+
+.rosso {
+
+    color: aqua;
+}
+
+
+
+#datiCarta input {
+
+    margin-top: 1%;
+    border: 1px solid black;
+    width: 150px;
+    height: 30px;
+
+}
+
+#scarpeScelte {
+
+    margin-top: 3%;
+
+}
+
+#scarpeScelte img {
+
+    width: 50px;
+    float: left;
+    margin-right: 10px;
+
+}
+
+#scarpeScelte p {
+
+    margin-top: 0;
+}
+
+section button {
+
+    width: 200px;
+    height: 50px;
+    margin-top: 20px;
+    color: white;
+
+}
+
+section button:hover {
+
+    background-color: rgb(88, 88, 88);
+    color: white;
+    border: 1px solid black;
+
+
+}
+
+#datiCarta div:nth-of-type(1) {
+
+    margin-left: 0;
+}
+
+#datiCarta div {
+
+    float: left;
+    margin-left: 10px;
+}
+
+#datiCarta div span {
+
+    display: block;
+}
+
+
+.errore {
+
+    color: red;
+    font-size: 0.8em;
+
+
+}
+
+button {
+
+
+    background-color: black;
+    border-radius: 10px;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+
+}
+
+#dati #metodi {
+
+    width: 100px;
+    margin-top: 20px;
+    padding: 8px;
+
+}
+
+
+/*#region FOOTER*/
+
+
+.wrapper {
+
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 50% 50%;
+}
+
+.wrapper .Element1 {
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.wrapper .Element1 ul,
+.wrapper .Element2 ul,
+.wrapper .Element3 ul,
+.wrapper .FinalElement ul {
+
+    list-style: none;
+    margin-left: 8%;
+
+}
+
+.wrapper .Element1 h2,
+.wrapper .Element2 h2,
+.wrapper .Element3 h2 {
+
+    color: rgb(221, 221, 221);
+    font-size: 1.3em;
+    margin-top: 8%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+
+.wrapper .Element1 ul li,
+.Element2 ul li,
+.Element3 ul li {
+
+    margin-bottom: 10px;
+
+}
+
+.wrapper .Element1 ul li a,
+.Element2 ul li a,
+.Element3 ul li a,
+.FinalElement ul li a {
+
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+
+}
+
+.wrapper .FinalElement {
+
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    margin-top: 7%;
+
+}
+
+
+hr {
+
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.wrapper .FinalElement ul {
+
+    display: flex;
+
+}
+
+
+
+.wrapper .FinalElement ul li {
+
+    margin-left: 2%;
+}
+
+.wrapper .FinalElement ul:nth-child(1) {
+
+    margin-left: 0;
+    color: rgb(219, 219, 219);
+}

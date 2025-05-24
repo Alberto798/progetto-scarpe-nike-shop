@@ -1,0 +1,47 @@
+<div *ngIf="isCartPrewiewVisible" class="prewiew">
+    <app-cart-preview [showPreviews]="isCartPrewiewVisible" (close)="toggleCartPrewiew()"
+        [scarpa]="scarpa"></app-cart-preview>
+
+</div>
+
+
+
+<div class="container-details">
+
+    <img id="img" [src]="currentImage">
+
+    <div id="info">
+        <p>{{scarpa?.nome}}</p>
+        <p>{{scarpa?.prezzo}}&euro;</p>
+    </div>
+
+    <h4>Seleziona la taglia</h4>
+    <ul class="taglie">
+        <li *ngFor="let taglia of scarpa?.taglie_disponibili" (click)="onSizeChanged(taglia)"
+            [ngClass]="{'active': selectedSize === taglia}">
+            {{taglia}}
+        </li>
+    </ul>
+
+
+    <div id="botton">
+        <button id="cart" (click)="addScarpa()">Aggiungi al carrello</button>
+        <button id="heart">Aggiungi ai preferiti</button>
+
+
+    </div>
+
+    <p id="description">{{scarpa?.descrizione}}</p>
+
+    <div id="img2">
+        <ul>
+            <li *ngFor="let immagine of scarpa?.immagine_secondaria">
+                <img [src]="immagine" (click)="changeCurrentImage(immagine)">
+            </li>
+
+        </ul>
+    </div>
+
+
+
+</div>
